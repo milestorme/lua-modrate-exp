@@ -8,7 +8,7 @@
     Download: https://github.com/iThorgrim-hub/lua-modrate-exp/archive/0.0.1.zip
     License: AGPL
 
-```
+
 	I share my configurable experience modifier.
 	You can configure the database that will store information about the players, for the blow the experience multiplier.
 
@@ -16,7 +16,6 @@
 	Example: If you set 5 the player will be able to set his spleen to x5 maximum.
 
 	All this is documented in the code, just open the script and change what needs to be changed.
-```
 
 # Usage
 
