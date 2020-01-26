@@ -43,11 +43,11 @@ function m_exp.onConnect(event, player)
 			mod_exp = 1;
 		}
 	end
-	local GetRateExp = CharDBQuery('SELECT mod_exp FROM ac_eluna.characters_exp_rates WHERE guid = '..pGuid..';')
+	local GetRateExp = CharDBQuery('SELECT mod_exp FROM '..m_config.elunaDB..'.characters_exp_rates WHERE guid = '..pGuid..';')
 	if GetRateExp ~= nil then
 		m_exp[pGuid].mod_exp = GetRateExp:GetUInt32(0)
 	else
-		local AddRateExp = CharDBQuery('INSERT INTO ac_eluna.characters_exp_rates (guid, mod_exp) VALUES ('..pGuid..', 1);')
+		local AddRateExp = CharDBQuery('INSERT INTO '..m_config.elunaDB..'.characters_exp_rates (guid, mod_exp) VALUES ('..pGuid..', 1);')
 		m_exp[pGuid].mod_exp = 1
 	end
 end
@@ -62,7 +62,7 @@ function m_exp.onDisconnect(event, player)
 			mod_exp = 1;
 		}
 	end
-	local SaveRateExp = CharDBQuery('UPDATE ac_eluna.characters_exp_rates SET mod_exp = '..m_exp[pGuid].mod_exp..' WHERE guid = '..pGuid..';')
+	local SaveRateExp = CharDBQuery('UPDATE '..m_config.elunaDB..'.characters_exp_rates SET mod_exp = '..m_exp[pGuid].mod_exp..' WHERE guid = '..pGuid..';')
 end
 RegisterPlayerEvent(4, m_exp.onDisconnect)
 
