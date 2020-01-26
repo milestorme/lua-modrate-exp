@@ -21,7 +21,7 @@
 # Usage
 
 - Download the [release](https://github.com/iThorgrim-hub/lua-modrate-exp/archive/0.0.1.zip)
-- Just drop the lua_modrate_exp.lua on your *lua_script* folder.
+- Just drop the lua_modrate_exp.lua on your *lua_scripts* folder.
 - Configure the script. **(Open with notepad & go to line 9)**.
 - Reload Eluna (.reload eluna).
 
